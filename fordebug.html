@@ -4,6 +4,46 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script type="text/javascript">
+        // let obj = {name:"孙悟空",age:18};
+        arr = [
+            {name:"孙悟空",age:18},
+            {name:"猪八戒",age:28},
+            {name:"沙和尚",age:38},
+            {name:"白骨精",age:20},
+            {name:"红孩儿",age:8}
+            ]
+
+        // for (let i in arr){
+        //     if (arr[i].age>20){
+        //         alert(arr[i].name)
+        //        console.log(arr[i].name);
+        //     }
+        // }
+
+        // arr.forEach(function (a){
+        //     console.log(a.name)
+        // })
+        // arr.splice(1,1,"蜘蛛精")
+        // console.log(arr)
+
+        function arrRemoveSame(arr){
+            result = [];
+            for(let index in arr){
+                let value = arr[index];
+                let position = result.indexOf(value);
+                if (position>=0){
+                   continue;
+                }
+                else {
+                    result.push(arr[index]);
+                }
+            }
+            return result;
+        }
+
+        console.log(arrRemoveSame([5,6,5,4,78,5,"hello","hi",null,null,arr,arr]));
+
+
 
     </script>
 </head>
